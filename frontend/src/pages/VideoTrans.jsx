@@ -4,7 +4,7 @@ import Main from '../components/Main'
 
 function VideoTrans() {
     return (
-        <div className='bg-[#F8F9FA] w-full h-screen flex'>
+        <div className='bg-[#F8F9FA] w-full flex'>
             <NavBar />
             <Main/>
 
