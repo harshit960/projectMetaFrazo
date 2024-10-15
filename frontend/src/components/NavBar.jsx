@@ -66,16 +66,33 @@ function NavBar() {
             News
           </div>
         </div>
-        <div className="flex flex-col">
-          <div className="text-[#5E5E5E] p-2 px-4 hover:text-[#0A47F2] rounded-[12px]  hover:bg-[#EBF5FF]">
-            Settings
+        <div className="flex flex-col space-y-4 mb-4">
+          <div className="text-[#5E5E5E] border-[#E7EDFE] border p-4 items-center px-4 hover:text-[#0A47F2] rounded-[12px]  hover:bg-[#EBF5FF]">
+            <div className="flex items-center">
+              <div className="mx-2">
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C12.7924 1 13.4348 1.64237 13.4348 2.43477V6.26083C13.4348 7.05323 12.7924 7.6956 12 7.6956C11.2076 7.6956 10.5652 7.05323 10.5652 6.26083V2.43477C10.5652 1.64237 11.2076 1 12 1Z" fill="#0732AC" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 16.3047C12.7924 16.3047 13.4348 16.9471 13.4348 17.7395V21.5655C13.4348 22.3579 12.7924 23.0003 12 23.0003C11.2076 23.0003 10.5652 22.3579 10.5652 21.5655V17.7395C10.5652 16.9471 11.2076 16.3047 12 16.3047Z" fill="#5B84F6" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.22297 4.22297C4.78329 3.66266 5.69174 3.66266 6.25206 4.22297L8.95902 6.92991C9.51934 7.49022 9.51934 8.39867 8.95902 8.95898C8.3987 9.51929 7.49025 9.51929 6.92993 8.95898L4.22297 6.25204C3.66266 5.69173 3.66266 4.78328 4.22297 4.22297Z" fill="#0941DC" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0411 15.0413C15.6014 14.481 16.5099 14.481 17.0702 15.0413L19.7771 17.7483C20.3375 18.3086 20.3375 19.217 19.7771 19.7773C19.2168 20.3377 18.3084 20.3377 17.748 19.7773L15.0411 17.0704C14.4808 16.5101 14.4808 15.6016 15.0411 15.0413Z" fill="#8EAAF9" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.0002C1 11.2078 1.64237 10.5654 2.43478 10.5654H6.26087C7.05328 10.5654 7.69565 11.2078 7.69565 12.0002C7.69565 12.7926 7.05328 13.435 6.26087 13.435H2.43478C1.64237 13.435 1 12.7926 1 12.0002Z" fill="#0A47F2" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3044 12.0002C16.3044 11.2078 16.9468 10.5654 17.7392 10.5654H21.5653C22.3577 10.5654 23.0001 11.2078 23.0001 12.0002C23.0001 12.7926 22.3577 13.435 21.5653 13.435H17.7392C16.9468 13.435 16.3044 12.7926 16.3044 12.0002Z" fill="#B3C6FB" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.95902 15.0413C9.51934 15.6016 9.51934 16.5101 8.95902 17.0704L6.25206 19.7773C5.69174 20.3377 4.78329 20.3377 4.22297 19.7773C3.66265 19.217 3.66266 18.3086 4.22297 17.7483L6.92993 15.0413C7.49025 14.481 8.3987 14.481 8.95902 15.0413Z" fill="#3B6CF5" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7774 4.22297C20.3377 4.78328 20.3377 5.69173 19.7774 6.25204L17.0704 8.95898C16.5101 9.51929 15.6016 9.51929 15.0413 8.95898C14.481 8.39867 14.481 7.49022 15.0413 6.92991L17.7483 4.22297C18.3086 3.66266 19.2171 3.66266 19.7774 4.22297Z" fill="#E7EDFE" />
+                </svg>
+              </ div>
+
+              Translating 4 videos
+            </div>
           </div>
-          <div className="text-[#5E5E5E] p-2 px-4 hover:text-[#0A47F2] rounded-[12px]  hover:bg-[#EBF5FF]">
-            Notification
+          <div className="text-[#5E5E5E] border-[#E7EDFE] border p-2 px-4 hover:text-[#0A47F2] rounded-[12px]  hover:bg-[#EBF5FF]">
+            <div className="flex-col">
+              <div className="text">Balance</div>
+              <div className="text">786/1200</div>
+            </div>
           </div>
-          <div className="text-[#5E5E5E] p-2 px-4 hover:text-[#0A47F2] rounded-[12px]  hover:bg-[#EBF5FF]">
-            Profile
-          </div>
+
 
         </div>
       </div>
