@@ -8,7 +8,7 @@ function NavBar() {
         <div className="flex flex-col ">
           <div className="flex p-6 px-4">
             <img src="assets/Frame 398.png" className='h-[34px]' alt="" srcset="" />
-            <img src="assets/hug.png" className='h-[34px]' alt="" srcset="" />
+            {/* <img src="assets/hug.png" className='h-[34px]' alt="" srcset="" /> */}
           </div>
           <div className="text-[#5E5E5E] p-2 px-4 hover:text-[#0A47F2] rounded-[12px] whitespace-nowrap hover:bg-[#EBF5FF]">
             Video Translation
