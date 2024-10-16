@@ -3,9 +3,13 @@ import React from 'react'
 function CreateUser() {
     return (
         <>
-            <img src="assets/Frame 398.png" alt="" srcset="" className='fixed w-[178px] top-8 left-8' />
-            <div className='flex items-center justify-center h-screen w-screen'>
-                <div className="flex flex-col space-y-8">
+
+
+
+            <div className='flex items-center justify-center min-h-screen  w-screen'>
+                <img src="assets/Frame 398.png" alt="" srcset="" className='absolute w-[178px] top-8 left-8' />
+                <img src="assets/CreateUserProcess.png" alt="" srcset="" className='absolute w-[232px] top-8 left-1/2 -translate-x-1/2' />
+                <div className="flex flex-col space-y-8 mt-20">
                     <div className="flex flex-col space-y-3">
 
                         <div className="text-[24px] font-bold">
@@ -36,10 +40,10 @@ function CreateUser() {
                         <button className='border rounded-[12px] border-[#EBF5FF] p-2 px-4 w-[603px] bg-[#B3C6FB] text-white' >Create Account</button>
                         <div className="text-[16px] text-center flex items-center justify-center space-x-1">
                             <div className="text">
-                            Already have an  account?
+                                Already have an  account?
                             </div>
                             <div className="text-[#0A47F2] underline">
-                            Sign in
+                                Sign in
                             </div>
                         </div>
                     </div>
