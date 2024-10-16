@@ -3,8 +3,8 @@ import React from 'react'
 function Login() {
     return (
         <>
-        <img src="assets/Frame 398.png" alt="" srcset=""  className='fixed w-[178px] top-8 left-8'/>
-        <div className='flex items-center justify-center h-screen w-screen'>
+        <div className='flex items-center justify-center min-h-screen w-screen'>
+        <img src="assets/Frame 398.png" alt="" srcset=""  className='absolute w-[178px] top-8 left-8'/>
             <div className="flex flex-col space-y-8">
                 <div className="flex flex-col space-y-3">
 
