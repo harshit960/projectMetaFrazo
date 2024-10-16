@@ -26,6 +26,8 @@ function Folder() {
                                 </div>
                             </div> */}
                             <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
+                            <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
+                            <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
 
 
                         </div>

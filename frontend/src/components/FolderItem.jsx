@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import File from './File';
 
 function FolderItem(props) {
-    const [height, setheight] = useState("h-[0px] scale-0");
+    const [height, setheight] = useState("h-[0px] scale-y-0");
     const [rotation, setrotation] = useState("");
+    const [active, setactive] = useState('');
     const handleClick = () => {
         if (rotation === "") {
 
-            setheight("h-[296px] scale-100");
+            setheight("h-auto scale-y-100");
             setrotation("rotate-45");
+            setactive(" hidden")
         }
         else {
-
-            setheight("h-[0px] scale-0");
+            
+            setactive(" ")
+            setheight("h-[0px] scale-y-0");
             setrotation("");
 
         }
@@ -24,9 +28,9 @@ function FolderItem(props) {
                     <div className="flex space-x-4">
 
                         <div className="text-[18px]">{props.date}</div>
-                        <div className="text-[18px]">{props.name}</div>
-                        <div className="text-[18px]">{props.language}</div>
-                        <div className="text-[18px]">{props.mode}</div>
+                        <div className={"text-[18px]"+active}>{props.name}</div>
+                        <div className={"text-[18px]"+active}>{props.language}</div>
+                        <div className={"text-[18px]"+active}>{props.mode}</div>
 
                     </div>
                     <button onClick={handleClick} className={rotation + " duration-200"}>
@@ -37,8 +41,8 @@ function FolderItem(props) {
                         </svg>
                     </button>
                 </div>
-                <div className={height + " w-full duration-200"}>
-                    <div className="flex flex-col mt-8 space-y-6">
+                <div className={height + " w-full duration-200 p-"}>
+                    <div className="flex flex-col my-8 space-y-6">
                         <div className="flex text-[14px]">
                             <div className="text basis-2/5">Name</div>
                             <div className="text basis-2/5">Language</div>
@@ -50,8 +54,13 @@ function FolderItem(props) {
                             <div className="text basis-1/5">{props.mode}</div>
                         </div>
                     </div>
-                    <div className="flex flex-col">
-
+                    <div className="flex flex-col space-y-6">
+                        <File />
+                        <File />
+                        <File />
+                        <File />
+                        <File />
+                        
                     </div>
                 </div>
 
