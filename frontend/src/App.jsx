@@ -1,6 +1,7 @@
 import VideoTrans from "./pages/VideoTrans";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
 export default function App() {
   return (
     <>
@@ -8,7 +9,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
           <Route index element={<VideoTrans />} />
-          {/* <Route path="blogs" element={<Blogs />} /> */}
+          <Route path="login" element={<Login />} />
           
         
       </Routes>
