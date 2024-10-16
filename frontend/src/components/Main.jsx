@@ -1,13 +1,11 @@
 import React from 'react'
+import TopNav from './TopNav'
 
 function Main() {
     return (
         <>
             <div className="flex flex-col px-16 py-6 space-y-4 w-full">
-                <div className="text-[24px]">
-                    Video Translation
-                </div>
-
+                <TopNav title={"Video Translation"} />
                 <div className="flex flex-col border-[#E7EDFE] border shadow-[#B3C6FB40] py-4 px-6  w-full justify-between rounded-[12px]">
                     <div className="flex justify-between ">
                         <div className="text">Select Mode</div>
@@ -31,7 +29,7 @@ function Main() {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="flex  items-center">
 
                     <div className="flex flex-col border-[#E7EDFE] border shadow-[#B3C6FB40] py-4 px-6  grow justify-between rounded-[12px]">
@@ -76,15 +74,15 @@ function Main() {
                 </div>
                 <div className="flex border-[#E7EDFE] border rounded-[24px] p-2">
 
-                <div className="flex flex-col border border-[#B3C6FB] border-dashed  w-full h-[360px] justify-between rounded-[24px]">
-                    <div className="flex items-center justify-center flex-col h-full space-y-2">
-                        <img src="assets/AddVid.png" alt="" srcset="" className='w-20'/>
-                        <div className="text-sm font-bold">Click to upload a file or drag and drop</div>
-                        <div className="text-sm ">File up to 200mb, 20mins </div>
+                    <div className="flex flex-col border border-[#B3C6FB] border-dashed  w-full h-[360px] justify-between rounded-[24px]">
+                        <div className="flex items-center justify-center flex-col h-full space-y-2">
+                            <img src="assets/AddVid.png" alt="" srcset="" className='w-20' />
+                            <div className="text-sm font-bold">Click to upload a file or drag and drop</div>
+                            <div className="text-sm ">File up to 200mb, 20mins </div>
+
+                        </div>
 
                     </div>
-                    
-                </div>
                 </div>
 
             </div>
