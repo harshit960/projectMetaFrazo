@@ -23,7 +23,7 @@ function FolderItem(props) {
 
     return (
         <>
-            <div className={"flex-col border-[#E7EDFE] border  rounded-[12px] flex items-center justify-between px-6 py-4 duration-200"}>
+            <div className={"flex-col border-[#E7EDFE] border  rounded-[12px] flex items-center justify-between px-6 py-4 duration-300"}>
                 <div className="flex items-center justify-between w-full ">
                     <div className="flex space-x-4">
 
