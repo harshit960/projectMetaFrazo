@@ -48,7 +48,7 @@ const FileUploadBox = () => {
     };
 
     return (
-        <div className="flex flex-col border border-[#B3C6FB] border-dashed w-full h-[360px] justify-between rounded-[24px]"
+        <div className="flex flex-col border border-[#B3C6FB] border-dashed w-full min-h-[360px] justify-between rounded-[24px]"
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
@@ -91,6 +91,26 @@ const FileUploadBox = () => {
                         {files.map((file, index) => (
                             <FileUploadItem key={index} file={file} />
                         ))}
+                    </div>
+                    <div className="text-[14px] font-bold px-6 pt-6 ">
+                        <div className="flex  justify-between">
+                            {/* <div className="w-8"></div> */}
+                            <div className="text basis-1/2">Total</div>
+                            <div className="text basis-1/4">750</div>
+                            <div className="text basis-1/4">00:41:00</div>
+                        </div>
+                    </div>
+                    <div className="text-[14px] font-bold px-6 pt-6">
+                        <div className="flex  justify-between">
+                            {/* <div className="w-8"></div> */}
+                            <div className="text basis-1/2">Output Time</div>
+                            <div className="text basis-1/4"></div>
+                            <div className="text basis-1/4">06:41:00</div>
+                        </div>
+                    </div>
+                    <div className="flex px-6 my-6">
+                        <button className="text-[14px] basis-1/3  text-[#5E5E5E]  px-6 py-2">Cancel</button>
+                        <button className="text-[14px] grow  text-white bg-[#0A47F2]  px-6 py-2 rounded-md ">Translate</button>
                     </div>
                 </>
                 )}
