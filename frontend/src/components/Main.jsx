@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TopNav from './TopNav'
 import SelectMode from './SelectMode'
+import FileUploadBox from './FileUploadBox';
 
 function Main() {
+    const [ProjectName, setProjectName] = useState("");
+
     return (
         <>
             <div className="flex flex-col px-16 py-6 space-y-4 w-full">
                 <TopNav title={"Video Translation"} />
-                <SelectMode/>
+                <SelectMode />
 
                 <div className="flex flex-col border-[#E7EDFE] border shadow-[#B3C6FB40] py-4 px-6   w-full justify-between rounded-[12px]">
                     <div className="flex justify-between ">
-                        <div className="text">Project Name</div>
+
+                        <input type="text" placeholder='Project Name' className='z-20 appearance-none w-full text-black ' value={ProjectName} onChange={(e) => setProjectName(e.target.value)} />
+
+                        {/* <div className="text">Project Name</div> */}
                         <div className="flex space-x-2">
 
                             <div className="text">
@@ -25,7 +31,7 @@ function Main() {
 
                     <div className="flex flex-col border-[#E7EDFE] border shadow-[#B3C6FB40] py-4 px-6  grow justify-between rounded-[12px]">
                         <div className="flex justify-between ">
-                            <div className="text">Select Mode</div>
+                            <div className="text">Source Language</div>
                             <div className="flex space-x-2">
 
                                 <div className="text">
@@ -37,7 +43,7 @@ function Main() {
                     <img src="assets/RightArrow.png" alt="" srcset="" className=' h-4 mx-4' />
                     <div className="flex flex-col border-[#E7EDFE] border shadow-[#B3C6FB40] py-4 px-6 grow  justify-between rounded-[12px]">
                         <div className="flex justify-between ">
-                            <div className="text">Select Mode</div>
+                            <div className="text">Translation Languages</div>
                             <div className="flex space-x-2">
 
                                 <div className="text">
@@ -64,16 +70,8 @@ function Main() {
                     </div>
                 </div>
                 <div className="flex border-[#E7EDFE] border rounded-[24px] p-2">
-
-                    <div className="flex flex-col border border-[#B3C6FB] border-dashed  w-full h-[360px] justify-between rounded-[24px]">
-                        <div className="flex items-center justify-center flex-col h-full space-y-2">
-                            <img src="assets/AddVid.png" alt="" srcset="" className='w-20' />
-                            <div className="text-sm font-bold">Click to upload a file or drag and drop</div>
-                            <div className="text-sm ">File up to 200mb, 20mins </div>
-
-                        </div>
-
-                    </div>
+<FileUploadBox/>
+                    
                 </div>
 
             </div>
