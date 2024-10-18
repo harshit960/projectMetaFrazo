@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 
 function Question(props) {
-    const [height, setheight] = useState("h-[0px] scale-0");
+    const [height, setheight] = useState("h-[0px] opacity-0");
     const [rotation, setrotation] = useState("");
     const handleClick = () => {
         if (rotation === "") {
 
-            setheight("h-[296px] scale-100");
+            setheight("h-[296px] opacity-100");
             setrotation("rotate-45");
         }
         else {
 
-            setheight("h-[0px] scale-0");
+            setheight("h-[0px] opacity-0");
             setrotation("");
 
         }

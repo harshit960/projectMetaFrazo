@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react'
 import File from './File';
 
 function NewsItem(props) {
-    const [height, setheight] = useState("h-[0px] scale-y-0");
+    const [height, setheight] = useState("h-[0px] opacity-0");
     const [rotation, setrotation] = useState("");
     const [active, setactive] = useState('');
     const handleClick = () => {
         if (rotation === "") {
 
-            setheight("h-auto scale-y-100");
+            setheight("h-auto opacity-100");
             setrotation("rotate-45");
             setactive(" hidden")
         }
         else {
 
             setactive(" ")
-            setheight("h-[0px] scale-y-0");
+            setheight("h-[0px] opacity-0");
             setrotation("");
 
         }
