@@ -8,6 +8,7 @@ import Folder from "./pages/Folder";
 import Subscription from "./pages/Subscription";
 import Support from "./pages/Support";
 import News from "./pages/News";
+import Translate from "./pages/Translate";
 export default function App() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
           <Route index element={<VideoTrans />} />
+          <Route path="translate" element={<Translate />} />
           <Route path="login" element={<Login />} />
           <Route path="folder" element={<Folder />} />
           <Route path="subscription" element={<Subscription />} />
