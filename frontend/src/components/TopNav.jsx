@@ -4,7 +4,7 @@ function TopNav(props) {
     return (
         <>
             <div className="flex justify-between items-center">
-                <div className="text-[24px]">
+                <div className="text-[20px] font-bold">
                     {props.title}
                 </div>
                 <div className="flex">

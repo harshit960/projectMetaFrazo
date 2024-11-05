@@ -11,7 +11,7 @@ function Folder() {
                 <NavBar />
                 <>
                     <>
-                        <div className="flex flex-col px-16 py-6 space-y-4 w-full">
+                        <div className="flex flex-col pr-6 py-8 space-y-4 w-full">
                             <TopNav title={"Folder"} />
 
                             {/* <div className="flex flex-col border-[#E7EDFE] border shadow-[#B3C6FB40] py-4 px-6  w-full justify-between rounded-[12px]">
@@ -25,9 +25,12 @@ function Folder() {
                                     </div>
                                 </div>
                             </div> */}
-                            <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
-                            <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
-                            <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
+                            <div className="flex flex-col rounded-[12px] bg-white p-6 space-y-6">
+
+                                <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
+                                <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
+                                <FolderItem date={"10.10.2024"} name={"UX/UI Lesson 1-4 translation"} laungage={""} mode={"Advanced"} />
+                            </div>
 
 
                         </div>

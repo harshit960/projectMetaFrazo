@@ -21,17 +21,7 @@ function SelectMode(props) {
     return (
         <>
             <div className={"flex-col    rounded-[32px] flex items-center justify-between  duration-200"}>
-                {/* <div className="flex items-center justify-between w-full h-[78px]">
-
-                    <div className="text-[16px] font-bold font-satoshi">{props.title}</div>
-                    <button onClick={handleClick} className={rotation + " duration-200"}>
-
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="11" width="2" height="24" rx="1" fill="#0E0E0C" />
-                            <rect x="24" y="11" width="2" height="24" rx="1" transform="rotate(90 24 11)" fill="#0E0E0C" />
-                        </svg>
-                    </button>
-                </div> */}
+                
                 <div onClick={handleClick} className="flex flex-col border-[#E7EDFE] border shadow-[#B3C6FB40] py-4 px-6 w-full justify-between rounded-[12px]">
                     <div className="flex justify-between ">
                         <div className="text">{mode}</div>
@@ -62,7 +52,8 @@ function SelectMode(props) {
                 </div>
 
             </div>
-        </>)
+        </>
+        )
 }
 
 export default SelectMode

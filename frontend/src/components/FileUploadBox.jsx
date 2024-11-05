@@ -54,7 +54,7 @@ const FileUploadBox = () => {
             onDrop={handleDrop}
             onClick={handleClick}
         >
-            <div className="">
+            <div className="h-full">
                 <input
                     id="fileInput"
                     type="file"
