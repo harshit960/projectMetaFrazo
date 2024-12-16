@@ -15,7 +15,7 @@ function NavBar() {
           <div className="flex flex-col bg-[#FFFFFF] rounded-[12px] p-3  justify-between items-center h-full">
             <div className="flex flex-col space-y-3">
               <Link to="/">
-              {/* {location.pathname == "/" || location.pathname == "/archive" ? */}
+                {/* {location.pathname == "/" || location.pathname == "/archive" ? */}
 
                 <div className="flex items-center  text-[#5E5E5E] p-2 px-4 hover:text-[#0A47F2] rounded-[12px] whitespace-nowrap hover:bg-[#EBF5FF]">
                   <div className="m-2">
@@ -84,6 +84,17 @@ function NavBar() {
                     </svg>
                   </div>
                   News
+                </div>
+              </Link>
+              <Link to="/sports">
+
+                <div className="flex items-center -center text-[#5E5E5E] p-2 px-4 hover:text-[#0A47F2] rounded-[12px]  hover:bg-[#EBF5FF]">
+                  <div className="m-2">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.30685 1.3101C8.46722 0.5633 9.53278 0.563298 9.69314 1.3101L10.8338 6.62191C10.8923 6.89462 11.1054 7.10765 11.3781 7.16621L16.6899 8.30685C17.4367 8.46722 17.4367 9.53278 16.6899 9.69314L11.3781 10.8338C11.1054 10.8923 10.8923 11.1054 10.8338 11.3781L9.69315 16.6899C9.53278 17.4367 8.46722 17.4367 8.30685 16.6899L7.16621 11.3781C7.10765 11.1054 6.89462 10.8923 6.62191 10.8338L1.3101 9.69315C0.5633 9.53278 0.563298 8.46722 1.3101 8.30685L6.62191 7.16621C6.89462 7.10765 7.10765 6.89462 7.16621 6.62191L8.30685 1.3101Z" fill="#5E5E5E" />
+                    </svg>
+                  </div>
+                  Sports Translation
                 </div>
               </Link>
             </div>

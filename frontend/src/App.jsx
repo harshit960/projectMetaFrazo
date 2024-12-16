@@ -9,6 +9,8 @@ import Subscription from "./pages/Subscription";
 import Support from "./pages/Support";
 import News from "./pages/News";
 import Translate from "./pages/Translate";
+import SportsTranslation from "./pages/SportsTranslation";
+import { TranslationApp } from "./pages/TranslationApp";
 export default function App() {
   return (
     <>
@@ -22,6 +24,7 @@ export default function App() {
           <Route path="subscription" element={<Subscription />} />
           <Route path="support" element={<Support />} />
           <Route path="news" element={<News />} />
+          <Route path="sports" element={<TranslationApp />} />
           <Route path="createuser" element={<CreateUser />} />
           <Route path="createuser/verify" element={<CreateUserVerify />} />
           
