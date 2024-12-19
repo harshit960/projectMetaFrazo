@@ -70,7 +70,7 @@ const SportsTranslation = ({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium">Source Language</label>
-                    <button
+                    <select
                       type="button"
                       className="flex h-10 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm focus:ring-2 focus:ring-ring"
                     >
@@ -88,29 +88,22 @@ const SportsTranslation = ({
                       >
                         <path d="m6 9 6 6 6-6"></path>
                       </svg>
-                    </button>
+                      <option selected value="en">English</option>
+                      <option>Spanish</option>
+                      <option>French</option>
+                    </select>
                   </div>
                   <div>
                     <label className="text-sm font-medium">Target Language</label>
-                    <button
+                    <select
                       type="button"
                       className="flex h-10 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm focus:ring-2 focus:ring-ring"
                     >
                       <span>{targetLanguage}</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-4 w-4 opacity-50"
-                      >
-                        <path d="m6 9 6 6 6-6"></path>
-                      </svg>
-                    </button>
+                      <option>English</option>
+                      <option selected value="es">Spanish</option>
+                      <option>French</option>
+                    </select>
                   </div>
                 </div>
 
@@ -118,7 +111,7 @@ const SportsTranslation = ({
                 <div className="flex justify-center">
                   <button
                     onClick={() => setIsRecording(!isRecording)}
-                    className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90 px-8 h-20 w-20 rounded-full focus:ring-2 focus:ring-ring"
+                    className="flex items-center justify-center bg-primary text-primary-foreground hover:bg-gray-500 h-20 w-20 rounded-full focus:ring-2 focus:ring-ring"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +122,7 @@ const SportsTranslation = ({
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="h-8 w-8"
+                      className="h-8 w-8 flex items-center justify-center"
                     >
                       <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
                       <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>

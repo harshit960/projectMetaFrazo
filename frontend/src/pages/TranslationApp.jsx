@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import SportsTranslation from './SportsTranslation';
 import NavBar from '../components/NavBar';
 
-// const DEEPL_API_KEY = process.env.NEXT_PUBLIC_DEEPL_API_KEY;
-// const DEEPGRAM_API_KEY = process.env.NEXT_PUBLIC_DEEPGRAM_API_KEY;
+const DEEPL_API_KEY = import.meta.env.VITE_DEEPL_API_KEY;
+const DEEPGRAM_API_KEY = import.meta.env.VITE_DEEPGRAM_API_KEY;
 
 export function TranslationApp() {
   const [isRecording, setIsRecording] = useState(false);
@@ -35,11 +35,13 @@ export function TranslationApp() {
       mediaRecorderRef.current.ondataavailable = async (event) => {
         if (event.data.size > 0) {
           const audioBlob = new Blob([event.data], { type: 'audio/webm' });
+          console.log("transcrbing audio");
           await transcribeAudio(audioBlob);
+          
         }
       };
 
-      mediaRecorderRef.current.start(1000); // Collect data every second
+      mediaRecorderRef.current.start(10000); // Collect data every second
     } catch (error) {
       console.error('Error accessing microphone:', error);
     }
@@ -56,11 +58,15 @@ export function TranslationApp() {
 
   const transcribeAudio = async (audioBlob) => {
     try {
+      console.log(audioBlob);
       const response = await fetch('https://api.deepgram.com/v1/listen', {
         method: 'POST',
         headers: {
           'Authorization': `Token ${DEEPGRAM_API_KEY}`,
           'Content-Type': 'audio/webm',
+          'Accept': "application/json",
+
+          
         },
         body: audioBlob,
       });
@@ -69,6 +75,8 @@ export function TranslationApp() {
       if (data.results?.channels?.[0]?.alternatives?.[0]?.transcript) {
         const newTranscription = data.results.channels[0].alternatives[0].transcript;
         setTranscription(prevTranscription => prevTranscription + " " + newTranscription);
+        console.log(newTranscription);
+        console.log("translating text");
         await translateText(newTranscription);
       }
     } catch (error) {
