@@ -41,7 +41,7 @@ export function TranslationApp() {
         }
       };
 
-      mediaRecorderRef.current.start(10000); // Collect data every second
+      mediaRecorderRef.current.start(delay*1000); // Collect data every second
     } catch (error) {
       console.error('Error accessing microphone:', error);
     }
