@@ -12,13 +12,12 @@ const SportsTranslation = ({
   translation,
 }) => {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen w-full flex-col">
       <main className="flex-1">
         <div className="container mx-auto p-6 space-y-8">
           {/* Header */}
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-primary rounded-full"></div>
               <h1 className="text-2xl font-bold">Sports Translation</h1>
             </div>
             <button

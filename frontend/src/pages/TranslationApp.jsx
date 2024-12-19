@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SportsTranslation from './SportsTranslation';
+import NavBar from '../components/NavBar';
 
 // const DEEPL_API_KEY = process.env.NEXT_PUBLIC_DEEPL_API_KEY;
 // const DEEPGRAM_API_KEY = process.env.NEXT_PUBLIC_DEEPGRAM_API_KEY;
@@ -30,7 +31,7 @@ export function TranslationApp() {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       microphoneRef.current = stream;
       mediaRecorderRef.current = new MediaRecorder(stream);
-      
+
       mediaRecorderRef.current.ondataavailable = async (event) => {
         if (event.data.size > 0) {
           const audioBlob = new Blob([event.data], { type: 'audio/webm' });
@@ -63,7 +64,7 @@ export function TranslationApp() {
         },
         body: audioBlob,
       });
-      
+
       const data = await response.json();
       if (data.results?.channels?.[0]?.alternatives?.[0]?.transcript) {
         const newTranscription = data.results.channels[0].alternatives[0].transcript;
@@ -89,7 +90,7 @@ export function TranslationApp() {
           target_lang: targetLanguage.toUpperCase(),
         }),
       });
-      
+
       const data = await response.json();
       if (data.translations?.[0]?.text) {
         setTranslation(prevTranslation => prevTranslation + " " + data.translations[0].text);
@@ -100,20 +101,26 @@ export function TranslationApp() {
   };
 
   return (
-    <SportsTranslation
-      isRecording={isRecording}
-      setIsRecording={setIsRecording}
-      roomCode={roomCode}
-      selectedMode={selectedMode}
-      setSelectedMode={setSelectedMode}
-      sourceLanguage={sourceLanguage}
-      setSourceLanguage={setSourceLanguage}
-      targetLanguage={targetLanguage}
-      setTargetLanguage={setTargetLanguage}
-      delay={delay}
-      setDelay={setDelay}
-      transcription={transcription}
-      translation={translation}
-    />
+    <>
+
+      <div className='bg-[#F8F9FA] w-full flex'>
+        <NavBar />
+        <SportsTranslation
+          isRecording={isRecording}
+          setIsRecording={setIsRecording}
+          roomCode={roomCode}
+          selectedMode={selectedMode}
+          setSelectedMode={setSelectedMode}
+          sourceLanguage={sourceLanguage}
+          setSourceLanguage={setSourceLanguage}
+          targetLanguage={targetLanguage}
+          setTargetLanguage={setTargetLanguage}
+          delay={delay}
+          setDelay={setDelay}
+          transcription={transcription}
+          translation={translation}
+        />
+      </div>
+    </>
   );
 }
